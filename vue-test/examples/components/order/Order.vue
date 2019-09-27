@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header msg_title="订单中心" msg_right="" type="1" @func="getMsgFormSon"></Header>
-        <van-tabs style="height: 100vh;" v-model="active" animated swipeable>
+        <van-tabs v-model="active" animated swipeable>
             <van-tab title="全部">
                 <div class="box" v-for="item in order_list">
                     <van-card style="background: #fff"
@@ -38,9 +38,10 @@
                 </div>
             </van-tab>
             <van-tab title="待付款">
-                <div class="box" v-for="item in order_list">
+                <template v-for="item in order_list">
                     <template v-if="item.type==1">
-                        <van-card style="background: #fff"
+                        <div class="box">
+                            <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -57,13 +58,15 @@
                             <van-button size="mini">付款</van-button>
                         </div>
                     </van-card>
+                        </div>
                     </template>
-                </div>
+                </template>
             </van-tab>
             <van-tab title="待发货">
-                <div class="box" v-for="item in order_list">
+                <template v-for="item in order_list">
                     <template v-if="item.type==2">
-                        <van-card style="background: #fff"
+                        <div class="box">
+                            <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -79,13 +82,15 @@
                             <van-button size="mini">挑选服务</van-button>
                         </div>
                     </van-card>
+                        </div>
                     </template>
-                </div>
+                </template>
             </van-tab>
             <van-tab title="待收货">
-                <div class="box" v-for="item in order_list">
+                <template v-for="item in order_list">
                     <template v-if="item.type==3">
-                        <van-card style="background: #fff"
+                        <div class="box">
+                            <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -102,31 +107,34 @@
                             <van-button style="border-color: #FF5000;color: #FF5000" size="mini">确认收货</van-button>
                         </div>
                     </van-card>
+                        </div>
                     </template>
-                </div>
+                </template>
             </van-tab>
             <van-tab title="待评价">
-                <div class="box" v-for="item in order_list">
+                <template  v-for="item in order_list">
                     <template v-if="item.type==4">
-                        <van-card style="background: #fff"
-                              num="2"
-                              price="2.00"
-                              desc="描述信息"
-                              :title= item.title
-                              thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
-                    >
-                        <div slot="tags">
-                            <van-tag plain type="danger">标签</van-tag>
-                            <van-tag plain type="danger">标签</van-tag>
+                        <div class="box">
+                            <van-card style="background: #fff"
+                                  num="2"
+                                  price="2.00"
+                                  desc="描述信息"
+                                  :title= item.title
+                                  thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+                        >
+                            <div slot="tags">
+                                <van-tag plain type="danger">标签</van-tag>
+                                <van-tag plain type="danger">标签</van-tag>
+                            </div>
+                            <div slot="footer">
+                                <van-button size="mini">查看物流</van-button>
+                                <van-button size="mini">卖了换钱</van-button>
+                                <van-button size="mini">评价</van-button>
+                            </div>
+                        </van-card>
                         </div>
-                        <div slot="footer">
-                            <van-button size="mini">查看物流</van-button>
-                            <van-button size="mini">卖了换钱</van-button>
-                            <van-button size="mini">评价</van-button>
-                        </div>
-                    </van-card>
                     </template>
-                </div>
+                </template>
             </van-tab>
         </van-tabs>
     </div>
@@ -179,6 +187,7 @@
         height: auto;
         border-radius: 5px;
         background: #fff;
+        border: 1px solid #eee;
         box-sizing: border-box;
         padding: 5px 0;
         margin: 10px;
