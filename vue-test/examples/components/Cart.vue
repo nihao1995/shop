@@ -54,6 +54,7 @@
                 return (price / 100).toFixed(2);
             },
             onSubmit() {
+
                 this.$toast('点击结算');
             }
         }

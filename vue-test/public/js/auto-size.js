@@ -1,4 +1,5 @@
 ! function (e, t) {
+
     var n = t.documentElement,
         d = e.devicePixelRatio || 1;
 
@@ -11,3 +12,4 @@
         a.style.border = ".5px solid transparent", o.appendChild(a), n.appendChild(o), 1 === a.offsetHeight && n.classList.add("hairlines"), n.removeChild(o)
     }
 }(window, document)
+
