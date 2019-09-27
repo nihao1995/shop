@@ -3,7 +3,7 @@
         <Header msg_title="订单中心" msg_right="" type="1" @func="getMsgFormSon"></Header>
         <van-tabs style="height: 100vh;" v-model="active" animated swipeable>
             <van-tab title="全部">
-                <div class="box" v-for="(item,index) in list">
+                <div class="box" v-for="item in order_list">
                     <van-card style="background: #fff"
                             num="2"
                             price="2.00"
@@ -38,8 +38,9 @@
                 </div>
             </van-tab>
             <van-tab title="待付款">
-                <div class="box" v-for="(item,index) in list" v-if="item.type==1">
-                    <van-card style="background: #fff"
+                <div class="box" v-for="item in order_list">
+                    <template v-if="item.type==1">
+                        <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -56,11 +57,13 @@
                             <van-button size="mini">付款</van-button>
                         </div>
                     </van-card>
+                    </template>
                 </div>
             </van-tab>
             <van-tab title="待发货">
-                <div class="box" v-for="(item,index) in list" v-if="item.type==2">
-                    <van-card style="background: #fff"
+                <div class="box" v-for="item in order_list">
+                    <template v-if="item.type==2">
+                        <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -76,11 +79,13 @@
                             <van-button size="mini">挑选服务</van-button>
                         </div>
                     </van-card>
+                    </template>
                 </div>
             </van-tab>
             <van-tab title="待收货">
-                <div class="box" v-for="(item,index) in list" v-if="item.type==3">
-                    <van-card style="background: #fff"
+                <div class="box" v-for="item in order_list">
+                    <template v-if="item.type==3">
+                        <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -97,11 +102,13 @@
                             <van-button style="border-color: #FF5000;color: #FF5000" size="mini">确认收货</van-button>
                         </div>
                     </van-card>
+                    </template>
                 </div>
             </van-tab>
             <van-tab title="待评价">
-                <div class="box" v-for="(item,index) in list" v-if="item.type==4">
-                    <van-card style="background: #fff"
+                <div class="box" v-for="item in order_list">
+                    <template v-if="item.type==4">
+                        <van-card style="background: #fff"
                               num="2"
                               price="2.00"
                               desc="描述信息"
@@ -118,6 +125,7 @@
                             <van-button size="mini">评价</van-button>
                         </div>
                     </van-card>
+                    </template>
                 </div>
             </van-tab>
         </van-tabs>
@@ -134,7 +142,7 @@
             return {
                 msgFormSon:'',
                 active: 0,
-                list:[
+                order_list:[
                     {type:1,title:"待付款标题1"},
                     {type:2,title:"待发货标题1"},
                     {type:3,title:"待收货标题1"},
