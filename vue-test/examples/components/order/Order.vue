@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header msg_title="订单中心" msg_right="" type="1" @func="getMsgFormSon"></Header>
-        <van-tabs style="height: 100vh;" v-model="active" animated swipeable>
+        <van-tabs style="height: 100%;" v-model="active" animated swipeable>
             <van-tab title="全部">
                 <div class="box" v-for="(item,index) in list">
                     <van-card style="background: #fff"
@@ -137,12 +137,12 @@
                 list:[
                     {type:1,title:"待付款标题1"},
                     {type:2,title:"待发货标题1"},
-                    {type:3,title:"待收货标题1"},
-                    {type:4,title:"待评价标题1"},
-                    {type:1,title:"待付款标题2"},
-                    {type:2,title:"待发货标题2"},
-                    {type:3,title:"待收货标题2"},
-                    {type:4,title:"待评价标题2"},
+                    // {type:3,title:"待收货标题1"},
+                    // {type:4,title:"待评价标题1"},
+                    // {type:1,title:"待付款标题2"},
+                    // {type:2,title:"待发货标题2"},
+                    // {type:3,title:"待收货标题2"},
+                    // {type:4,title:"待评价标题2"},
                 ]
             };
         },
