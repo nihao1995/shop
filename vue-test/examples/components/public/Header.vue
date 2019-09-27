@@ -6,6 +6,7 @@
             left-text="返回"
             left-arrow
             fixed
+            @search="onSearch"
             @click-left="onClickLeft"
             @click-right="onClickRight">
             <van-icon name="search" slot="right" />
@@ -16,6 +17,7 @@
                 :right-text=msg_right
                 left-arrow
                 fixed
+                @search="onSearch"
                 @click-left="onClickLeft"
                 @click-right="onClickBtn"
         />
@@ -52,7 +54,11 @@
             },
             onClickRight() {
                 this.$emit('func',this.value);//向父组件传输入框的值
-                console.log(this.value)
+                // console.log(this.value)
+            },
+            onSearch(){
+                console.log(1)
+                this.onClickRight()
             },
             onClickBtn(){
                 Toast('暂无后续逻辑~');

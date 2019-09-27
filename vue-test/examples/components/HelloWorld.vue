@@ -31,7 +31,7 @@
       <van-cell title="查看商品详情" is-link @click="sorry" />
     </van-cell-group>
 
-<!--    <van-goods-action>-->
+    <van-goods-action>
 <!--      <van-goods-action-icon icon="chat-o" @click="sorry">-->
 <!--        客服-->
 <!--      </van-goods-action-icon>-->
@@ -44,38 +44,12 @@
 <!--      <van-goods-action-button type="danger" @click="sorry">-->
 <!--        立即购买-->
 <!--      </van-goods-action-button>-->
-<!--    </van-goods-action>-->
+    </van-goods-action>
   </div>
 </template>
 
 <script>
-  // import {
-  //   Tag,
-  //   Col,
-  //   Icon,
-  //   Cell,
-  //   CellGroup,
-  //   Swipe,
-  //   Toast,
-  //   SwipeItem,
-  //   GoodsAction,
-  //   GoodsActionIcon,
-  //   GoodsActionButton
-  // } from 'vant';
   export default {
-    name:'helloworld',
-    // components: {
-    //   [Tag.name]: Tag,
-    //   [Col.name]: Col,
-    //   [Icon.name]: Icon,
-    //   [Cell.name]: Cell,
-    //   [CellGroup.name]: CellGroup,
-    //   [Swipe.name]: Swipe,
-    //   [SwipeItem.name]: SwipeItem,
-    //   [GoodsAction.name]: GoodsAction,
-    //   [GoodsActionIcon.name]: GoodsActionIcon,
-    //   [GoodsActionButton.name]: GoodsActionButton
-    // },
     data() {
       return {
         goods: {
@@ -98,7 +72,7 @@
         this.$router.push('cart');
       },
       sorry() {
-        // Toast('暂无后续逻辑~');
+         this.$toast('暂无后续逻辑~');
       }
     }
   };
