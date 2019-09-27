@@ -1,3 +1,4 @@
+
 <template>
     <div>
         <van-checkbox-group class="card-goods" v-model="checkedGoods">
@@ -6,6 +7,7 @@
             </van-checkbox>
         </van-checkbox-group>
         <van-submit-bar :price="totalPrice" :disabled="!checkedGoods.length" :button-text="submitBarText" @submit="onSubmit"/>
+        <Button type="primary">Primary</Button>
     </div>
 </template>
 
@@ -52,7 +54,7 @@
                 return (price / 100).toFixed(2);
             },
             onSubmit() {
-                Toast('点击结算');
+                this.$toast('点击结算');
             }
         }
     };
