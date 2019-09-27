@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "iview": "^3.5.1",
+    "vant": "^1.6.25",
     "vue": "^2.6.10"
   },
   "devDependencies": {
