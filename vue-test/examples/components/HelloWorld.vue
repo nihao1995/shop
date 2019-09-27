@@ -45,7 +45,7 @@
 <!--      <van-goods-action-button type="danger" @click="sorry">-->
 <!--        立即购买-->
 <!--      </van-goods-action-button>-->
-    </van-goods-action>
+<!--    </van-goods-action>-->
   </div>
 </template>
 
