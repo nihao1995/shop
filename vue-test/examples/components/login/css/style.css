@@ -1,0 +1,179 @@
+/*----------------------------------------清除默认样式----------------------------------------*/
+
+html,body{/*height:100%;*/min-height: 100vh;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:0.15rem/1.14 Microsoft YaHei,arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+button{border: none;background-color: transparent;}
+a,a:hover{color:#333;}
+/*去除图片下方空隙*/
+img{vertical-align: middle;}
+/* 去除input默认填充的背景颜色*/
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+/*清除input[type=number]的默认样式*/
+input[type=number] {-moz-appearance:textfield;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;margin: 0;}
+
+*{
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);/*清除移动端 a 标签等点击区域变色*/
+	-webkit-overflow-scrolling : touch}/*避免ios滑动滚动条卡顿*/
+
+
+/*清除移动端 input 样式*/
+input{
+    border: none;
+    -moz-appearance:none;
+    -webkit-appearance : none ; /*解决ios上按钮的圆角问题*/
+    border-radius: 0; /*解决ios上输入框圆角问题*/
+    outline:medium; /*去掉鼠标点击的默认黄色边框*/
+    background-color: transparent;
+}
+
+/*清除浮动*/
+.clearfix:after,.clearfix:before{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+   zoom: 1;
+}
+.clear { clear: both; }
+
+
+.dis-n{display: none !important;}
+.dis-b{ display: block !important; }
+.pos-r{position: relative;}
+.dis-flex{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.fl { float: left; }
+.fr { float: right; }
+.over-hide{overflow: hidden;}
+
+
+/*高-填充*/
+.h05 { height: 0.05rem; }
+.h1 { height: 0.1rem; }
+.h15 { height: 0.15rem; }
+.h2 { height: 0.2rem; }
+.h3 { height: 0.3rem; }
+.h35 { height: 0.35rem; }
+.h4 { height: 0.4rem; }
+.h5 { height: 0.5rem; }
+.h10 { height: 1rem; }
+
+/*行高*/
+.lh015 { line-height: .15rem }
+.lh2 { line-height: .2rem }
+.lh25 { line-height: .25rem }
+.lh3 { line-height: .3rem }
+.lh35 { line-height: .35rem }
+
+.pt05 { padding-top: 0.05rem; }
+.pt1 { padding-top: 0.1rem; }
+.pb05 { padding-bottom: 0.05rem; }
+
+.pl05 { padding-left: 0.05rem; }
+.pl1 { padding-left: 0.1rem; }
+.pl2 { padding-left: 0.2rem; }
+
+.pr05 { padding-right: 0.05rem; }
+.pr1 { padding-right: 0.1rem; }
+.pr2 { padding-right: 0.2rem; }
+
+/* 小字体 */
+.sm-fs { font-size: 0.13rem; }
+/* 中字体 */
+.md-fs { font-size: 0.15rem; }
+/* 大字体 */
+.lg-fs { font-size: 0.18rem; }
+/* 最小字体 */
+.xs-fs { font-size: 12px;}
+/* 大图标字体 */
+.bg-fs { font-size: 0.2rem; }
+
+
+
+/*背景色*/
+.bg-fff{background-color: #fff;}
+.bg-fafafa{background-color: #fafafa;}
+.bg-f5f5f5{background-color: #f5f5f5;}
+.bg-f7f8fb{background-color: #f7f8fb}
+.bg-f0cb63{background-color: #f0cb63}
+.bg-faad14{background-color: #faad14}
+.bg-fa541c{background-color: #fa541c}
+.bg-f5222d{background-color: #f5222d}
+.bg-52c41a{background-color: #52c41a}
+.bg-389e0d{background-color: #389e0d}
+.bg-40a9ff{background-color: #40a9ff}
+.bgl1{background:linear-gradient(45deg, #f5222d, #ff7875)}
+.bgl2{background:linear-gradient(45deg, #fa541c, #ff9c6e)}
+.bgl3{background:linear-gradient(45deg, #faad14, #ffd666)}
+
+/*文字颜色*/
+.c-fff{color: #fff}
+.c-e4e4e4{color: #e4e4e4}
+.c-bbb{color: #bbb}
+.c-999{color: #999}
+.c-888{color: #888}
+.c-b0c3d2{color: #b0c3d2}
+.c-ff4d4f{color: #ff4d4f}
+.c-f5222d{color: #f5222d !important}
+.c-cf1322{color: #cf1322}
+.c-fa541c{color: #fa541c}
+.c-fa8c16{color: #fa8c16}
+.c-faad14{color: #faad14}
+.c-f0cb63{color: #f0cb63}
+.c-fadb14{color: #fadb14}
+.c-a0d911{color: #a0d911}
+.c-52c41a{color: #52c41a}
+.c-389e0d{color: #389e0d}
+.c-7cb305{color: #7cb305}
+.c-13c2c2{color: #13c2c2}
+.c-40a9ff{color: #40a9ff}
+.c-1890ff{color: #1890ff}
+.c-096dd9{color: #096dd9}
+.c-0050b3{color: #0050b3}
+.c-722ed1{color: #722ed1}
+.c-eb2f96{color: #eb2f96}
+
+/*边框*/
+.border-r{
+	border-right: 1px solid #eee
+}
+.border-l{
+	border-left: 1px solid #eee
+}
+.border-b{
+	border-bottom: 1px solid #eee
+}
+.mar-b15{
+	margin-bottom: 15px;
+}
+.tcenter{text-align: center;}
+
+.fw-b{font-weight: bold;}

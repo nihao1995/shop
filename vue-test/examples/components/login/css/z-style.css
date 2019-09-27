@@ -1,0 +1,89 @@
+/*登录页*/
+.login-sign{
+	background-color: #521d23;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	margin: 0 auto .3rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	padding: 0.35rem;
+}
+.login-sign h3{
+	flex: 1;
+	color: #fff;
+	text-align: center;
+	font-size: 0.4rem;
+	font-weight: normal;
+}
+.input{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	margin-bottom: 0.3rem;
+}
+.login-form{
+	width: 2.5rem;
+	margin: auto;
+	text-align: center;
+}
+.login-form .input input{
+	color: #fff;
+	background-color: #707070;
+	padding-left: 0.1rem;
+	line-height: 0.38rem;
+	border-radius: 5px;
+	font-size: 0.15rem;
+	width: 100%;
+}
+.login-form .input input::-webkit-input-placeholder{
+    color: #fff;
+    font-size: 0.13rem;
+}
+.login-form .input input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color: #fff;
+    font-size: 0.13rem;
+}
+.login-form .input input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    font-size: 0.13rem;
+}
+.login-form .input input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color: #fff;
+    font-size: 0.13rem;
+}
+.login-form .input .iconfont{
+	font-size: 0.3rem;
+	color: #707070;
+	padding-right: 0.1rem;
+}
+.login-form .input button{
+	background-color: #521d23;
+	color: #fff;
+	font-size: 0.13rem;
+	border-radius: 5px;
+	line-height: 0.38rem;
+	width: 2rem;
+	margin-left: 0.05rem;
+}
+.login-form>button{
+	background-color: #521d23;
+	color: #fff;
+	font-size: 0.15rem;
+	border-radius: 10rem;
+	line-height: 0.45rem;
+	width: 100%;
+}
+.login-form>a{
+	display: inline-block;
+	font-size: 0.15rem;
+	color: #7d7d7d;
+	line-height: 0.25rem;
+	margin-top:0.1rem;
+	margin-bottom: 0.1rem;
+}
+.login-bottom-img{
+	text-align: center;
+}
+.login-bottom-img>img{width: 50%;}

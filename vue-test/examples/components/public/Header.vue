@@ -54,6 +54,7 @@
             },
             onClickRight() {
                 this.$emit('func',this.value);//向父组件传输入框的值
+
                 // console.log(this.value)
             },
             onSearch(){

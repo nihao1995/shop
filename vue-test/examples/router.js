@@ -6,6 +6,7 @@ import Router from 'vue-router'
 import HelloWorld from './components/HelloWorld'
 import Cart from './components/Cart'
 import Person from './components/Person'
+import Login from './components/login/Login'
 
 //订单模块
 import Order from './components/order/Order'
@@ -19,5 +20,6 @@ export default new Router({
         { path: '/person', name: 'person', component: Person },
         //订单模块
         { path: '/order', name: 'order', component: Order },
+        { path: '/login', name: 'login', component:  Login},
     ]
 })
