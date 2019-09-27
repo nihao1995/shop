@@ -78,8 +78,8 @@
                     </van-card>
                 </div>
             </van-tab>
-            <van-tab title="待收货" v-for="(item,index) in list" v-if="item.type==3">
-                <div class="box">
+            <van-tab title="待收货">
+                <div class="box" v-for="(item,index) in list" v-if="item.type==3">
                     <van-card style="background: #fff"
                               num="2"
                               price="2.00"
@@ -99,8 +99,8 @@
                     </van-card>
                 </div>
             </van-tab>
-            <van-tab title="待评价" v-for="(item,index) in list" v-if="item.type==4">
-                <div class="box">
+            <van-tab title="待评价">
+                <div class="box" v-for="(item,index) in list" v-if="item.type==4">
                     <van-card style="background: #fff"
                               num="2"
                               price="2.00"
