@@ -52,7 +52,7 @@
                 return (price / 100).toFixed(2);
             },
             onSubmit() {
-                Toast('点击结算');
+                // Toast('点击结算');
             }
         }
     };
