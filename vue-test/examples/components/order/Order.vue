@@ -3,7 +3,7 @@
         <Header msg_title="订单中心" msg_right="" type="1" @func="getMsgFormSon"></Header>
         <van-tabs v-model="active" animated swipeable>
             <van-tab title="全部">
-                <div class="box" v-for="item in order_list">
+                <div class="box" v-for="(item,index) in order_list" :key=index>
                     <van-card style="background: #fff"
                             num="2"
                             price="2.00"
@@ -38,9 +38,9 @@
                 </div>
             </van-tab>
             <van-tab title="待付款">
-                <template v-for="item in order_list">
+                <div v-for="(item,index) in order_list" :key=index>
                     <template v-if="item.type==1">
-                        <div class="box">
+                        <div class="box" >
                             <van-card style="background: #fff"
                               num="2"
                               price="2.00"
@@ -60,10 +60,10 @@
                     </van-card>
                         </div>
                     </template>
-                </template>
+                </div>
             </van-tab>
             <van-tab title="待发货">
-                <template v-for="item in order_list">
+                <div v-for="(item,index) in order_list"  :key=index>
                     <template v-if="item.type==2">
                         <div class="box">
                             <van-card style="background: #fff"
@@ -84,12 +84,12 @@
                     </van-card>
                         </div>
                     </template>
-                </template>
+                </div>
             </van-tab>
             <van-tab title="待收货">
-                <template v-for="item in order_list">
+                <div v-for="(item,index) in order_list" :key=index>
                     <template v-if="item.type==3">
-                        <div class="box">
+                        <div class="box"  >
                             <van-card style="background: #fff"
                               num="2"
                               price="2.00"
@@ -109,12 +109,12 @@
                     </van-card>
                         </div>
                     </template>
-                </template>
+                </div>
             </van-tab>
             <van-tab title="待评价">
-                <template  v-for="item in order_list">
+                <div v-for="(item,index) in order_list" :key=index>
                     <template v-if="item.type==4">
-                        <div class="box">
+                        <div class="box" >
                             <van-card style="background: #fff"
                                   num="2"
                                   price="2.00"
@@ -134,7 +134,7 @@
                         </van-card>
                         </div>
                     </template>
-                </template>
+                </div>
             </van-tab>
         </van-tabs>
     </div>
